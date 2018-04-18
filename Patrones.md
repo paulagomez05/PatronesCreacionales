@@ -260,6 +260,61 @@ void dibuja() {
 }
 </code></pre>
 
+## Bridge
+### Introducción 
+
+Este patrón debe ser utilizado cuando:
+Se desea evitar un enlace permanente entre la abstracción y su implementación. Esto puede ser debido a que la implementación debe ser seleccionada o cambiada en tiempo de ejecución. Tanto las abstracciones como sus implementaciones deben ser extensibles por medio de subclases. En este caso, el patrón Bridge permite combinar abstracciones e implementaciones diferentes y extenderlas independientemente. Cambios en la implementación de una abstracción no deben impactar en los clientes, es decir, su código no debe tener que ser recompilado. 
+
+Se desea compartir una implementación entre múltiples y este hecho debe ser escondido a los clientes.
+Permite simplificar jerarquías demasiado pobladas.
+
+![GitHub Logo](http://2.bp.blogspot.com/-LIWVkOwbj7Q/VD1vHPM97cI/AAAAAAAABlQ/eFFdxvxqgf0/s1600/00.jpg)
+
+Se implementa de la siguiente forma
+<pre><code>
+interface Implementador {
+    public abstract void operacion();
+}
+ 
+/** primera implementacion de Implementador **/
+class ImplementacionA implements Implementador{
+    public void operacion() {
+        System.out.println("Esta es la implementacion A");
+    }
+}
+/** segunda implementacion de Implementador **/
+class ImplementacionB implements Implementador{
+    public void operacion() {
+        System.out.println("Esta es una implementacion de B");
+    }
+}
+/** interfaz de abstracción **/
+interface Abstraccion {
+    public void operacion();
+}
+/** clase refinada que implementa la abstraccion **/
+class AbstraccionRefinada implements Abstraccion{
+    private Implementador implementador;
+    public AbstraccionRefinada(Implementador implementador){
+        this.implementador = implementador;
+    }
+    public void operacion(){
+        implementador.operacion();
+    }
+}
+/** aplicacion que usa el patrón Bridge **/
+public class EjemploBridge {
+    public static void main(String[] args) {
+        Abstraccion[] abstracciones = new Abstraccion[2];
+        abstracciones[0] = new AbstraccionRefinada(new ImplementacionA());
+        abstracciones[1] = new AbstraccionRefinada(new ImplementacionB());
+        for(Abstraccion abstraccion:abstracciones)
+            abstraccion.operacion();
+    }
+}
+</code></pre>
+
 
 ### Referencias
  http://migranitodejava.blogspot.com.co 
