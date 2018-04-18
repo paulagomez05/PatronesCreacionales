@@ -1,4 +1,4 @@
-# PatronesCreacionales
+# Patrones Creacionales
 
 ### Integrantes
 1. Paula Andrea Gomez - 20152020927
