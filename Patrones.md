@@ -207,6 +207,58 @@ Desventajas: como muchos patrones, añade complejidad al diseño. Hay quién dic
 
 ![GitHub Logo](http://1.bp.blogspot.com/-DPJ5nnEdZ3s/Ubm18bwxqKI/AAAAAAAABSI/D-c_eLyYgmY/s1600/adapter.jpg)
 
+En el siguiente bloque de codigo podemos ver como se puede implementar el patron estructural Adapter
+
+<pre><code>
+
+public class Cliente {
+
+public static void main(String[] args) {
+    Forma linea = new Linea();
+    Forma rombo = new Rombo();
+    Forma texto = new CuadroTexto();
+
+    ArrayList<Forma> l = new ArrayList<Forma>();
+    l.add(linea);
+    l.add(rombo);
+    l.add(texto);
+
+    for (Forma f : l)
+        f.dibuja();
+}
+
+}
+public abstract class Forma {
+abstract void dibuja();
+}
+
+public class Linea extends Forma{
+@Override
+void dibuja() {
+    System.out.println("----------------------");
+}
+}
+
+public class Rombo extends Forma {
+@Override
+void dibuja() {
+    System.out.println("    *    ");
+}
+
+import javax.swing.JTextPane;
+
+// es más complicada y necesita usar una libreria externa TextView
+
+public class CuadroTexto extends Forma{
+
+public JTextPane text = new JTextPane();
+
+void dibuja() {
+    text.setText("text");
+    System.out.println(text.getText());
+}
+}
+</code></pre>
 ### Referencias
  http://migranitodejava.blogspot.com.co 
 
