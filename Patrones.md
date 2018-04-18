@@ -1,11 +1,9 @@
-# Patrones Creacionales y Estructurales
+# Patrones Creacionales
 
 ### Integrantes
 1. Paula Andrea Gomez - 20152020927
 2. Juan Arias Ortegon - 20161020522
 3. Jorge Escobar Bohorquez - 20152020120
-
-## Creacionales
 
 ## Sinlgeton
 ### Introducción 
@@ -79,28 +77,73 @@ public class Creador extends CreadorAbstracto
     public void Creador() {
     }
 </code></pre>
-
-
-##  Abstract Factory
-### Introducción
-
-Este patrón crea diferentes familias de objetos. Su objetivo principal es soportar múltiples estándares que vienen definidos por las diferentes jerarquías de herencia de objetos. Es similar al Factory Method, sólo que esta orientado a combinar productos. Se puede utilizar cuando un sistema se debe configurar con una de entre varias familias de productos.
-
-![GitHub Logo](https://github.com/paulagomez05/PatronesCreacionales/blob/master/abstract-factory.jpg)
-
-AbstractFactory: declara una interfaz para la creación de objetos de productos abstractos.
-
-ConcreteFactory: implementa las operaciones para la creación de objetos de productos concretos.
-
-AbstractProduct: declara una interfaz para los objetos de un tipo de productos.
-
-ConcreteProduct: define un objeto de producto que la correspondiente factoría concreta se encargaría de crear, a la vez que implementa la interfaz de producto abstracto.
-
-Client: utiliza solamente las interfaces declaradas en la factoría y en los productos abstractos. 
-Una única instancia de cada FactoryConcreto es creada en tiempo de ejecución. AbstractFactory delega la creación de productos a sus subclases FactoryConcreto.
-
++ 
++ # Patrones Estructurales
++ ## Decorator
++### Introducción 
++El patrón decorator permite añadir responsabilidades a objetos concretos de forma dinámica. Los decoradores ofrecen una alternativa más flexible que la herencia para extender las funcionalidades.
++### Este patrón se debe utilizar cuando:
++Hay una necesidad de extender la funcionalidad de una clase, pero no hay razones para extenderlo a través de la herencia.
++Se quiere agregar o quitar dinámicamente la funcionalidad de un objeto.
++![GitHub Logo](https://lh6.googleusercontent.com/vIoskk-tgi1crMhB0O-Cd3lQZwpYOEfs8_tPxCvTC5hK0yHjlIXHDIVLJa-gwRhoesr-BLI-nUhctVOn1FUAD6XWOVKtQNzUoZ8nayfwYarmy5JkpQ)
+### Codigo
+public abstract class Combo {
+  
+ String descripcion = "";
+  
+ public String getDescripcion() 
+ {
+  return descripcion;
+ }
+ 
+ public abstract int valor();
+ 
+}
++
++
+public class ComboBasico extends Combo{
+ 
+ public ComboBasico() {
+  descripcion="Porcion de Papas Fritas, " +
+   "salsa, queso, amburgueza sencilla, gaseosa";
+ }
+  
+ @Override
+ public int valor() {
+  return 6200;
+ }
+}
++
++
+public abstract class AdicionalesDecorator extends Combo{
+ 
+ public abstract String getDescripcion();
+}
++
++
+public class Carne extends AdicionalesDecorator{
+ 
+ Combo combo;
+  
+ public Carne(Combo combo)
+ {
+  this.combo=combo; 
+ }
+  
+ @Override
+ public String getDescripcion() {
+  return combo.getDescripcion()+" , Porcion de Carne";
+ }
+ 
+ @Override
+ public int valor() {
+  return 2500+combo.valor();
+ }
+}
 
 ### Referencias
  http://migranitodejava.blogspot.com.co 
 
  https://informaticapc.com 
+ 
+ https://www.genbetadev.com/metodologias-de-programacion
