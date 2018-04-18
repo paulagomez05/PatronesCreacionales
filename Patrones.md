@@ -77,16 +77,20 @@ public class Creador extends CreadorAbstracto
     public void Creador() {
     }
 </code></pre>
-+ 
-+ # Patrones Estructurales
-+ ## Decorator
-+### Introducción 
-+El patrón decorator permite añadir responsabilidades a objetos concretos de forma dinámica. Los decoradores ofrecen una alternativa más flexible que la herencia para extender las funcionalidades.
-+### Este patrón se debe utilizar cuando:
-+Hay una necesidad de extender la funcionalidad de una clase, pero no hay razones para extenderlo a través de la herencia.
-+Se quiere agregar o quitar dinámicamente la funcionalidad de un objeto.
-+![GitHub Logo](https://lh6.googleusercontent.com/vIoskk-tgi1crMhB0O-Cd3lQZwpYOEfs8_tPxCvTC5hK0yHjlIXHDIVLJa-gwRhoesr-BLI-nUhctVOn1FUAD6XWOVKtQNzUoZ8nayfwYarmy5JkpQ)
-### Codigo
+
+# Patrones Estructurales
+
+## Decorator
+
+### Introducción 
+
+El patrón decorator permite añadir responsabilidades a objetos concretos de forma dinámica. Los decoradores ofrecen una alternativa más flexible que la herencia para extender las funcionalidades.
+### Este patrón se debe utilizar cuando:
+Hay una necesidad de extender la funcionalidad de una clase, pero no hay razones para extenderlo a través de la herencia.
+Se quiere agregar o quitar dinámicamente la funcionalidad de un objeto.
+
+![GitHub Logo](https://lh6.googleusercontent.com/vIoskk-tgi1crMhB0O-Cd3lQZwpYOEfs8_tPxCvTC5hK0yHjlIXHDIVLJa-gwRhoesr-BLI-nUhctVOn1FUAD6XWOVKtQNzUoZ8nayfwYarmy5JkpQ)
+<pre><code>
 public abstract class Combo {
   
  String descripcion = "";
@@ -140,7 +144,7 @@ public class Carne extends AdicionalesDecorator{
   return 2500+combo.valor();
  }
 }
-
+</code></pre>
 ### Referencias
  http://migranitodejava.blogspot.com.co 
 
