@@ -316,6 +316,169 @@ public class EjemploBridge {
 </code></pre>
 
 
+## Compsite
+### Introducción 
+
+Se debe utilizar este patrón cuando:
+Se busca representar una jerarquía de objetos como “parte-todo”.
+Se busca que el cliente puede ignorar la diferencia entre objetos primitivos y compuestos (para que pueda tratarlos de la misma manera).
+
+![GitHub Logo](https://danielggarcia.files.wordpress.com/2014/03/033014_1801_patronesest1.png?w=620)
+
+<code><pre>
+public abstract class AbstractCompositor {
+
+   public abstract int getCosto();
+   public abstract void agregarHoja(AbstractCompositor composicion);
+}
+
+public class Hoja extends AbstractCompositor {
+ 
+ private int costo;
+ public Hoja(int costo){
+  this.costo = costo;
+ }
+
+ @Override
+ public int getCosto() { 
+  return this.costo;
+ }
+
+ @Override
+ public void agregarHoja(AbstractCompositor composicion) {
+  // metodo no se usa
+ }
+}
+public class Libro extends AbstractCompositor {
+ 
+ private int costo = 0;
+ private List<AbstractCompositor> listaComposicion;
+ 
+ /**
+  * Constructor
+  */
+ public Libro (){
+  listaComposicion = new ArrayList<AbstractCompositor>();
+ }
+ 
+ /**
+  * Obtiene el costo del libro
+  */
+ @Override
+ public int getCosto() { 
+  return this.costo;
+ }
+ 
+ /**
+  * Agrega las hojas y calcula su valor rapidamente.
+  * @param composicion
+  */
+ public void agregarHoja(AbstractCompositor composicion){
+  this.costo = this.costo + composicion.getCosto();
+  this.listaComposicion.add(composicion);
+ }
+}
+public static void main(String[] args) {
+     AbstractCompositor componenteUno = new Hoja(10);
+
+     System.out.println(componenteUno.getCosto());
+     
+     AbstractCompositor componenteTres = new Hoja(3);
+     AbstractCompositor componenteDos = new Libro();
+     
+     componenteDos.agregarHoja(componenteUno);
+     componenteDos.agregarHoja(componenteTres);
+     
+     System.out.println(componenteDos.getCosto());
+
+ }
+}
+</code></pre> 
+
+## Facade
+### Introducción 
+Se debe utilizar cuando:
+Se quiera proporcionar una interfaz sencilla para un subsistema complejo.
+Se quiera desacoplar un subsistema de sus clientes y de otros subsistemas, haciéndolo más independiente y portable.
+Se quiera dividir los sistemas en niveles: las fachadas serían el punto de entrada a cada nivel. Facade puede ser utilizado a nivel aplicación.
+
+![GitHub Logo](![GitHub Logo](https://danielggarcia.files.wordpress.com/2014/03/033014_1801_patronesest1.png?w=620))
+
+Se implementa
+<code><pre> 
+public class FachadaImpresoraNormal {
+
+    Impresora impresora;
+    
+    
+    public FachadaImpresoraNormal(String texto) {
+        super();
+        impresora= new Impresora();
+        impresora.setColor(true);
+        impresora.setHoja("A4");
+        impresora.setTipoDocumento("PDF");
+        impresora.setTexto(texto);
+    }
+
+
+    public void imprimir() {
+        
+        impresora.imprimirDocumento();
+    }
+    
+}
+
+
+public class PrincipalCliente2 {
+
+    public static void main(String[] args) {
+        
+        
+        FachadaImpresoraNormal fachada1= new FachadaImpresoraNormal("texto1");
+        fachada1.imprimir();
+        
+        FachadaImpresoraNormal fachada2= new FachadaImpresoraNormal("texto2");
+        fachada2.imprimir();
+        
+        
+        Impresora i3 = new Impresora();
+        i3.setHoja("a4");
+        i3.setColor(true);
+        i3.setTipoDocumento("excel");
+        i3.setTexto("texto 3");
+        i3.imprimirDocumento();
+    }
+
+}
+var peticion = $.ajax( "destino.php" ).done(function() {
+
+           alert( "ok" );
+})
+
+var peticion2 = $.get( "destino.php",function() {
+
+           alert( "ok" );
+});
+
+var peticion3 = $.post( "destino.php",function() {
+
+           alert( "ok" );
+});
+</code></pre> 
+
+## Proxy
+### Introducción
+
+Cuándo usarlo
+En cualquier situación en que sea necesaria una referencia a un objeto más versátil y/o sofisticada que un simple puntero. Por ejemplo:
+Un apoderado remoto proporciona un representante local para un objeto en un espacio de direcciones diferente (J.Coplien los llama embajadores).
+Un apoderado virtual crea por demanda objetos costosos.
+Un apoderado de protección restringe, por motivos de seguridad, el acceso a un objeto.
+Una referencia “inteligente” es una sustitución por un simple puntero, que incorpora servicios adicionales como cuenta del número de referencias, carga de objetos persistentes en memoria cuando estos son referenciados y uso de cerrojos para controlar el acceso exclusivo a regiones críticas.
+
+Su UML
+![GitHub Logo](![GitHub Logo](https://danielggarcia.files.wordpress.com/2014/03/033014_1801_patronesest1.png?w=620))
+
 ### Referencias
  http://migranitodejava.blogspot.com.co 
 
