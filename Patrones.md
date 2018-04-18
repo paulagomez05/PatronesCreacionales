@@ -36,7 +36,7 @@ Factory Method es un patrón de creación de objetos y normalmente se suele usar
 
 En el siguiente bloque de codigo podemos ver como se puede implementar el patron creacional Factory Method 
 
-<pre>
+<pre><code>
 package FactoryMethod1;
 public class Main
 {
@@ -76,7 +76,7 @@ public class Creador extends CreadorAbstracto
 {
     public void Creador() {
     }
-<code>
+</code></pre>
 
 ### Referencias
 < http://migranitodejava.blogspot.com.co >
