@@ -195,6 +195,18 @@ public class Carne extends AdicionalesDecorator{
 }
 </code></pre>
 
+## Adapter
+### Introducción 
+
+Como se ilustra en la imagen que encabeza este artículo, el patrón Adapter sirve para hacer que dos interfaces, en principio diferentes, puedan comunicarse. Para ello añadiremos un adaptador intermedio, que se encargará de realizar la conversión de una interface a otra.
+
+Lo usaremos cuándo: necesitamos hacer compatibles dos interfaces, que de inicio no lo son. Muy útil cuando trabajamos con librerías externas. Una analogía con el mundo real sería la de un adaptador para utilizar un conector español en un enchufe americano.
+
+Ventajas: hace que dos interfaces incompatibles, sean compatibles. Puede servir para encapsular clases que no controlamos, y que pueden cambiar.
+Desventajas: como muchos patrones, añade complejidad al diseño. Hay quién dice que este patrón es un parche, utilizado en malos diseños.
+
+![GitHub Logo](http://1.bp.blogspot.com/-DPJ5nnEdZ3s/Ubm18bwxqKI/AAAAAAAABSI/D-c_eLyYgmY/s1600/adapter.jpg)
+
 ### Referencias
  http://migranitodejava.blogspot.com.co 
 
