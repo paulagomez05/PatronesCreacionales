@@ -316,7 +316,7 @@ public class EjemploBridge {
 </code></pre>
 
 
-## Compsite
+## Composite
 ### Introducción 
 
 Se debe utilizar este patrón cuando:
@@ -486,6 +486,20 @@ Su implementacion
 ![GitHub Logo](http://2.bp.blogspot.com/-v6ZRwvV8vQQ/TekSA4j_jRI/AAAAAAAAJOM/F-Yhn7xuI0Y/s1600/ghd.png)
 ![GitHub Logo](http://4.bp.blogspot.com/-e1oqFWAfHHQ/TekSHMFMQXI/AAAAAAAAJOQ/aJdRYi28MlY/s1600/objetoremoto.png)
 ![GitHub Logo](http://1.bp.blogspot.com/-tP7jpNOSONM/TekS4HAS3wI/AAAAAAAAJOY/B02dHb406lI/s1600/guardardatos.png)
+
+## Flyweight
+### Introducción
+
+Busca eliminar o reducir la redundancia cuando tenemos gran cantidad de objetos que contienen información idéntica, además de lograr un equilibrio entre flexibilidad y rendimiento (uso de recursos).
+Este patrón quiere evitar el hecho de crear un gran número estados de objeto para representar a un sistema. Permite compartir estados para soportar un gran número de objetos pequeños aumentando la eficiencia en espacio.
+
+![GitHub Logo](https://lh6.googleusercontent.com/U8FtCPlWF05eCqgwYsQuO4IPhNEbo2eD7-VD-Zpd-FcR7A9xO_rDVOg08QWkdM2tiO4T1p2CaQeTJfmehzwPoKfTAvX4bga8klpg9P2LxRlGuwLQu10)
+
+Su implementacion 
+
+![GitHub Logo](https://2.bp.blogspot.com/-3hrJHEDummc/Tej4FrXzW7I/AAAAAAAAJOE/eRZldykA53Y/s1600/main.png)
+![GitHub Logo](https://2.bp.blogspot.com/-eD2_qB0aizQ/Tej3zXgntHI/AAAAAAAAJOA/YkhvXtEU7gg/s1600/alumno.png) 
+
 
 ### Referencias
  http://migranitodejava.blogspot.com.co 
