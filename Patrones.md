@@ -477,7 +477,15 @@ Un apoderado de protección restringe, por motivos de seguridad, el acceso a un 
 Una referencia “inteligente” es una sustitución por un simple puntero, que incorpora servicios adicionales como cuenta del número de referencias, carga de objetos persistentes en memoria cuando estos son referenciados y uso de cerrojos para controlar el acceso exclusivo a regiones críticas.
 
 Su UML
-![GitHub Logo](![GitHub Logo](https://danielggarcia.files.wordpress.com/2014/03/033014_1801_patronesest1.png?w=620))
+
+![GitHub Logo](https://informaticapc.com/patrones-de-diseno/images/proxy.jpg)
+
+Su implementacion
+![GitHub Logo](http://1.bp.blogspot.com/-sZvdyV6QwLM/TekSnYtf6hI/AAAAAAAAJOU/oSaKfcnG1cs/s1600/proxy.png)
+![GitHub Logo](http://2.bp.blogspot.com/-QdcAUINg4Jk/TekR73hGRKI/AAAAAAAAJOI/r7qM3MkJhWk/s1600/iguardar.png)
+![GitHub Logo](http://2.bp.blogspot.com/-v6ZRwvV8vQQ/TekSA4j_jRI/AAAAAAAAJOM/F-Yhn7xuI0Y/s1600/ghd.png)
+![GitHub Logo](http://4.bp.blogspot.com/-e1oqFWAfHHQ/TekSHMFMQXI/AAAAAAAAJOQ/aJdRYi28MlY/s1600/objetoremoto.png)
+![GitHub Logo](http://1.bp.blogspot.com/-tP7jpNOSONM/TekS4HAS3wI/AAAAAAAAJOY/B02dHb406lI/s1600/guardardatos.png)
 
 ### Referencias
  http://migranitodejava.blogspot.com.co 
