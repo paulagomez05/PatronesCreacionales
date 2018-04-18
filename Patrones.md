@@ -34,7 +34,7 @@ Factory Method es un patrón de creación de objetos y normalmente se suele usar
 
 ![GitHub Logo](https://github.com/paulagomez05/PatronesCreacionales/blob/master/factory.jpg)
 
-
+En el siguiente bloque de codigo podemos ver como se puede implementar el patron creacional Factory Method 
 
 <pre>
 package FactoryMethod1;
@@ -49,5 +49,32 @@ public class Main
         video.reproducir();
     }
 }
-
+// PRODUCTO, SEGUN UML//
+package FactoryMethod2;
+ public interface IArchivo
+{
+    public void reproducir();
+}
+// PRODUCTO CONCRETO, SEGUN UML//
+package FactoryMethod2;
+public class ArchivoAudio implements IArchivo
+{
+    public ArchivoAudio() {
+    }
+// CREADOR, SEGUN UML//    
+    package FactoryMethod1;
+ public abstract class CreadorAbstracto
+{
+    public static final int AUDIO = 1;
+    public static final int VIDEO = 2;
+    // --------------------------------
+     public abstract IArchivo crear(int tipo);
+}
+// CREADOR CONCRETO, SEGUN UML// 
+package FactoryMethod1;
+public class Creador extends CreadorAbstracto
+{
+    public void Creador() {
+    }
 <code>
+
