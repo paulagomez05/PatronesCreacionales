@@ -7,7 +7,7 @@
 
 ## Sinlgeton
 ### Introducción 
-
+Es un patrón de diseño que permite restringir la creación de objetos pertenecientes a una clase o el valor de un tipo a un único objeto. Su intención consiste en garantizar que una clase sólo tenga una instancia y proporcionar un punto de acceso global a ella. Lo utilizamos porque permite acceso controlado a la única instancia, puede tener un control estricto sobre cómo y cuándo acceden los clientes a la instancia, Debe haber exactamente una instancia de una clase, y debe ser accesible a los clientes desde un punto de acceso conocido.
 
 ![GitHub Logo](https://github.com/paulagomez05/PatronesCreacionales/blob/master/2.png)
 
