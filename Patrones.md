@@ -110,8 +110,26 @@ Los objetos que dependen de un algoritmo tendrán que cambiar cuando el algoritm
 
 ![GitHub Logo](https://informaticapc.com/patrones-de-diseno/images/builder.jpg)
 
+En el siguiente bloque de codigo podemos ver como se puede implementar el patron creacional Builer
 
+<pre><code>
+Vehiculo v = new Vehiculo();
+v.NumPuertas = 5;
+v.Matricula = "1034 CAA";
+v.Faros = new Faro[4];
+v.Faros[0] = new Faro(TipoFaro.Xenon);
+v.Faros[1] = new Faro(TipoFaro.Xenon);
+v.Faros[2] = new Faro(TipoFaro.Lexus);
+v.Faros[3] = new Faro(TipoFaro.Lexus);
+v.Color = "Rojo";
+v.Motor = new Motor(TipoMotor.Gasolina);
+v.Motor.Capacidad = 2200;
+v.Motor.Valvulas = 12;
 
+DirectorConstruccion director = new DirectorConstruccion (new ConstructorFordFiestaSportEdition());
+Vehiculo v = director.ConstruirVehiculo();
+
+</code></pre>
 # Patrones Estructurales
 
 ## Decorator
