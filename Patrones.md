@@ -1,9 +1,11 @@
-# Patrones Creacionales
+# Patrones Creacionales y Estructurales
 
 ### Integrantes
 1. Paula Andrea Gomez - 20152020927
 2. Juan Arias Ortegon - 20161020522
 3. Jorge Escobar Bohorquez - 20152020120
+
+## Creacionales
 
 ## Sinlgeton
 ### Introducción 
@@ -77,6 +79,26 @@ public class Creador extends CreadorAbstracto
     public void Creador() {
     }
 </code></pre>
+
+
+##  Abstract Factory
+### Introducción
+
+Este patrón crea diferentes familias de objetos. Su objetivo principal es soportar múltiples estándares que vienen definidos por las diferentes jerarquías de herencia de objetos. Es similar al Factory Method, sólo que esta orientado a combinar productos. Se puede utilizar cuando un sistema se debe configurar con una de entre varias familias de productos.
+
+![GitHub Logo](https://github.com/paulagomez05/PatronesCreacionales/blob/master/abstract-factory.jpg)
+
+AbstractFactory: declara una interfaz para la creación de objetos de productos abstractos.
+
+ConcreteFactory: implementa las operaciones para la creación de objetos de productos concretos.
+
+AbstractProduct: declara una interfaz para los objetos de un tipo de productos.
+
+ConcreteProduct: define un objeto de producto que la correspondiente factoría concreta se encargaría de crear, a la vez que implementa la interfaz de producto abstracto.
+
+Client: utiliza solamente las interfaces declaradas en la factoría y en los productos abstractos. 
+Una única instancia de cada FactoryConcreto es creada en tiempo de ejecución. AbstractFactory delega la creación de productos a sus subclases FactoryConcreto.
+
 
 ### Referencias
  http://migranitodejava.blogspot.com.co 
