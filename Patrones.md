@@ -79,6 +79,6 @@ public class Creador extends CreadorAbstracto
 </code></pre>
 
 ### Referencias
-< http://migranitodejava.blogspot.com.co >
+ http://migranitodejava.blogspot.com.co 
 
-< https://informaticapc.com >
+ https://informaticapc.com 
