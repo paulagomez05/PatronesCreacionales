@@ -90,6 +90,7 @@ Hay una necesidad de extender la funcionalidad de una clase, pero no hay razones
 Se quiere agregar o quitar dinámicamente la funcionalidad de un objeto.
 
 ![GitHub Logo](https://lh6.googleusercontent.com/vIoskk-tgi1crMhB0O-Cd3lQZwpYOEfs8_tPxCvTC5hK0yHjlIXHDIVLJa-gwRhoesr-BLI-nUhctVOn1FUAD6XWOVKtQNzUoZ8nayfwYarmy5JkpQ)
+
 <pre><code>
 public abstract class Combo {
   
@@ -103,8 +104,7 @@ public abstract class Combo {
  public abstract int valor();
  
 }
-+
-+
+
 public class ComboBasico extends Combo{
  
  public ComboBasico() {
@@ -117,14 +117,12 @@ public class ComboBasico extends Combo{
   return 6200;
  }
 }
-+
-+
+
 public abstract class AdicionalesDecorator extends Combo{
  
  public abstract String getDescripcion();
 }
-+
-+
+
 public class Carne extends AdicionalesDecorator{
  
  Combo combo;
@@ -145,6 +143,7 @@ public class Carne extends AdicionalesDecorator{
  }
 }
 </code></pre>
+
 ### Referencias
  http://migranitodejava.blogspot.com.co 
 
