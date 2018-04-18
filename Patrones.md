@@ -498,6 +498,8 @@ Este patrón quiere evitar el hecho de crear un gran número estados de objeto p
 Su implementacion 
 
 ![GitHub Logo](https://2.bp.blogspot.com/-3hrJHEDummc/Tej4FrXzW7I/AAAAAAAAJOE/eRZldykA53Y/s1600/main.png)
+
+
 ![GitHub Logo](https://2.bp.blogspot.com/-eD2_qB0aizQ/Tej3zXgntHI/AAAAAAAAJOA/YkhvXtEU7gg/s1600/alumno.png) 
 
 
