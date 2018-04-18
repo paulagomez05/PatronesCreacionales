@@ -108,7 +108,7 @@ Permite la creación de un objeto complejo, a partir de una variedad de partes q
 
 Los objetos que dependen de un algoritmo tendrán que cambiar cuando el algoritmo cambia. Por lo tanto, los algoritmos que estén expuestos a dicho cambio deberían ser separados, permitiendo de esta manera reutilizar dichos algoritmos para crear diferentes representaciones. 
 
-![GitHub Logo](https://informaticapc.com/patrones-de-diseno/images/builder.jpgr)
+![GitHub Logo](https://informaticapc.com/patrones-de-diseno/images/builder.jpg)
 
 
 
