@@ -34,5 +34,20 @@ Factory Method es un patrón de creación de objetos y normalmente se suele usar
 
 ![GitHub Logo](https://github.com/paulagomez05/PatronesCreacionales/blob/master/factory.jpg)
 
-En el siguiente bloque de codigo podemos ver como implementamos el patron creacional Factory Method 
 
+
+<pre>
+package FactoryMethod1;
+public class Main
+{
+    public static void main(String[] args)
+    {
+         CreadorAbstracto creator = new Creador();
+        IArchivo audio = creator.crear( Creador.AUDIO );
+        audio.reproducir();
+        IArchivo video = creator.crear( Creador.VIDEO );
+        video.reproducir();
+    }
+}
+
+<code>
