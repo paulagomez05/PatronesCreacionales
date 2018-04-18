@@ -82,7 +82,7 @@ public class Creador extends CreadorAbstracto
 ### Introducción
 Este patrón crea diferentes familias de objetos. Su objetivo principal es soportar múltiples estándares que vienen definidos por las diferentes jerarquías de herencia de objetos. Es similar al Factory Method, sólo que esta orientado a combinar productos. Se debe utilizar cuando Un sistema se debe configurar con una de entre varias familias de productos.
 
-![GitHub Logo](https://github.com/paulagomez05/PatronesCreacionales/blob/master/color.png)
+![GitHub Logo](https://github.com/paulagomez05/PatronesCreacionales/blob/master/abstract-factory.jpg)
 
 AbstractFactory: declara una interfaz para la creación de objetos de productos abstractos.
 
@@ -96,6 +96,9 @@ Client: utiliza solamente las interfaces declaradas en la factoría y en los pro
 Una única instancia de cada FactoryConcreto es creada en tiempo de ejecución. AbstractFactory delega la creación de productos a sus subclases FactoryConcreto.
 
 En el siguiente bloque de codigo podemos ver como se puede implementar el patron creacional Abstract Factory
+
+![GitHub Logo](https://github.com/paulagomez05/PatronesCreacionales/blob/master/color.png)
+
 ![GitHub Logo](https://github.com/paulagomez05/PatronesCreacionales/blob/master/amarillo.png)
 
 
